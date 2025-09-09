@@ -2,7 +2,7 @@ import torch, torch.nn as nn, torch.nn.functional as F
 from .block import TinyBlock
 
 class TinyTransformer(nn.Module):
-    def __init__(self, vocab_size, d_model=16, n_heads=4, n_layers=4, block_size=128, dropout=0.0):
+    def __init__(self, vocab_size, d_model, n_heads=8, n_layers=16, block_size=128, dropout=0.0):
         super().__init__()
         self.block_size = block_size
         self.token_emb = nn.Embedding(vocab_size, d_model)

@@ -108,9 +108,9 @@ app = FastAPI(title="NanoTransformerLab DSL API", version="0.1.0")
 # Параметры по умолчанию (можно поменять перед продом)
 DEVICE = get_device("auto")
 BLOCK_SIZE = 128
-DMODEL = 16
-NHEADS = 4
-NLAYERS = 4
+DMODEL = 64
+NHEADS = 8
+NLAYERS = 16
 DROPOUT = 0.0
 
 # Глобальные модели

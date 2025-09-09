@@ -2,7 +2,7 @@ import math, torch
 import torch.nn as nn
 
 class CausalSelfAttention(nn.Module):
-    def __init__(self, d_model=16, n_heads=4, block_size=128, dropout=0.0):
+    def __init__(self, d_model, n_heads, block_size, dropout=0.0):
         super().__init__()
         assert d_model % n_heads == 0, "d_model must be divisible by n_heads"
         self.d_model = d_model

@@ -212,7 +212,7 @@ def sample_program(rng, max_imports=2):
         out = ["OUT"] + out  # prefix marker
     return surface, ast, out
 
-def build_corpus(n=6000, seed=7):
+def build_corpus(n=10000, seed=7):
     rng = random.Random(seed)
     progs = [sample_program(rng) for _ in range(n)]
     return progs

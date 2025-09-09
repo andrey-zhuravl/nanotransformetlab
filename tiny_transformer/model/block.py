@@ -2,7 +2,7 @@ import torch.nn as nn
 from .attention import CausalSelfAttention
 
 class TinyBlock(nn.Module):
-    def __init__(self, d_model=16, n_heads=4, block_size=128, mlp_mult=2, dropout=0.0):
+    def __init__(self, d_model, n_heads, block_size, mlp_mult=2, dropout=0.0):
         super().__init__()
         self.ln1 = nn.LayerNorm(d_model)
         self.attn = CausalSelfAttention(d_model, n_heads, block_size, dropout)

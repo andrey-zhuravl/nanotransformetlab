@@ -152,7 +152,7 @@ class TinyTransformer(nn.Module):
 d_model = 2
 n_heads = 1   # try 1 or 2 with d_model=2
 n_layers = 1
-lr = 1e-2
+lr = 1e-3
 
 model = TinyTransformer(vocab_size, d_model=d_model, n_heads=n_heads, n_layers=n_layers, dropout=0.0).to(device)
 optimizer = torch.optim.AdamW(model.parameters(), lr=lr)
